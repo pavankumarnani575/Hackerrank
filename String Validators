@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    methods=['isalnum','isalpha','isdigit','islower','isupper']
+    s = input()
+    for j in methods:
+        l=[]
+        for i in s:
+            l.append(getattr(i,j)())
+        if any(l):      
+            print ('True')
+        else:
+            print('False')
+        l=[]
